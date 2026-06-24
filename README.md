@@ -1,89 +1,58 @@
-# AmazoneClone-APP
-Build an Amazon Clone App using React, Redux-Toolkit and Firebase Cloud Services.
+<h1 align="center">🛒 Amazon Clone</h1>
 
-E-Commerce Functionality 👇
+<p align="center">
+  An e-commerce Amazon clone with cart, authentication and Stripe payments.
+</p>
 
-1️⃣ Accounts and Login Page
+<p align="center">
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Redux_Toolkit-764ABC?style=for-the-badge&logo=redux&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Firebase-DD2C00?style=for-the-badge&logo=firebase&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Stripe-635BFF?style=for-the-badge&logo=stripe&logoColor=white"/>
+  <img src="https://img.shields.io/badge/license-MIT-green?style=for-the-badge"/>
+</p>
 
+## ✨ Features
 
-2️⃣ Products Page 📦
+- 🛍️ Product catalog and shopping cart
+- 🔐 Authentication with Firebase Auth
+- 💳 Checkout with Stripe payments
+- 🗄️ Orders persisted in Firebase
+- 🧮 State management with Redux Toolkit
 
+## 🛠️ Tech Stack
 
-3️⃣ Cart and Checkout Page 🛒
+- **Core:** React · Vite
+- **State:** Redux Toolkit · React Redux
+- **Backend services:** Firebase (Auth + Firestore) · `react-firebase-hooks`
+- **Payments:** Stripe (`@stripe/react-stripe-js`)
+- **UI:** Material UI (MUI) · Emotion
+- **Routing:** React Router
 
+## 🚀 Getting Started
 
-4️⃣ Real Payments 💳
-
-
-5️⃣ Order History Page 📖
-
-## Setup
-
-Follow all these steps as explained below. Do not miss any steps, or you won't be able to run this application.
-
-### Firebase Authentication on Websites
-
-You can use Firebase Authentication to allow users to sign in to your app using one or more sign-in methods, including email address and password sign-in, and federated identity providers such as Google Sign-in and Facebook Login.
-
-More information below
-
-https://firebase.google.com/docs/auth/web/start
-
-### Cloud Functions for Firebase
-
-Cloud Functions for Firebase is a serverless framework that lets you automatically run backend code in response to events triggered by Firebase features and HTTPS requests. Your JavaScript or TypeScript code is stored in Google's cloud and runs in a managed environment. There's no need to manage and scale your own servers.
-
-More information below
-
-https://firebase.google.com/docs/functions/get-started
-
-🟠 You can see this service in the folder functions, it is not the server that is being consumed by the client, because in order to deploy it, you will need a Blaze account in Firebase. If you don't have this type of account, deploy the server to another site, and change the base URL in ./src/services/httpServices.js
-
-### Custom payment flow
-
-Learn how to embed a custom Stripe payment form in your website or application. The client- and server-side code builds a checkout form with [Elements](https://stripe.com/docs/payments/elements) to complete a payment using various payment methods.
-
-More information below
-
-https://stripe.com/docs/payments/quickstart
-
-🟠 To control your own payment flow, you must have your own Stripe account, in it, you will get the Public Key and Secret Key to test payments. In the project, these keys are located ./src/App.jsx and ./functions/index.js. Replace them if you have them.
-
-### Install the Dependencies
-
-Next, from the project folder, install the dependencies:
-
-    npm i
-
-Next, from the ./functions folder, install the dependencies:
-
-    cd functions
-    npm i
-
-### Start the Server locally
-
-From the ./functions folder, run:
-
-    npm run serve
-
-After you run this command, the Firebase CLI outputs the URL for any HTTP function endpoints. In your terminal, you should see a line like the following:
-
-```
-http://localhost:5001/<project-id>/us-central1/api
+```bash
+git clone https://github.com/reiorozco/amazonclone-app.git
+cd amazonclone-app
+npm install
 ```
 
-🟠 **Important** You also need to change the address where the client is making the requests in the following file ./src/services/httpService.js
+### Environment variables
+Create a `.env` from `.env.example` with your Firebase and Stripe credentials.
 
-### Start the Client
+### Run
+```bash
+npm run dev      # start dev server
+npm run build    # production build
+npm run preview  # preview production build
+```
 
-From the project folder
+> ℹ️ A Stripe webhook / functions backend is required for live payments.
 
-    npm run dev
+## 📸 Screenshots
 
-This will launch the React client on port 3000 by default, if you can set a different point is in ./client/vite.config.js.
+> _Add screenshots or a short GIF of the storefront and checkout here._
 
-Open up your browser and head over to:
+## 📄 License
 
-http://localhost:3000/
-
-✅ You should see the client.
+Released under the [MIT License](LICENSE).
